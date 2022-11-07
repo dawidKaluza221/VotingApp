@@ -20,7 +20,7 @@ namespace VotingApp.Contexts
         {
             optionsBuilder
                 .UseLoggerFactory(MyLoggerFactory)
-                .UseSqlServer("Server=tcp:mevest.database.windows.net, 1433; Initial Catalog = VoteApp; Persist Security Info=False; User ID = rootDB; Password=Sys@Mult1; MultipleActiveResultSets=False; Encrypt=True; TrustServerCertificate=False; Connection Timeout = 30;");
+                .UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=VotingApp;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Connect Timeout=60;Encrypt=False;TrustServerCertificate=False");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
